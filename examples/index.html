@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Quetzal Tags</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container" style="margin-bottom: 50px;">
+			<div class="page-header">
+				<h1>Quetzal Tags</h1>
+				<p class="lead">A simple tags</p>
+			</div>
+			<h3>Empty Input</h3>
+			<div id="tags1" class="form-group"><input type="text" name="tags" class="form-control"></div>
+			<h3>Filled Input</h3>
+			<div id="tags2" class="form-group"><input type="text" name="tags" value="Comedy,Fantasy,School" class="form-control"></div>
+			<h3>Readonly Input</h3>
+			<div id="tags3" class="form-group"><input type="text" name="tags" value="Comedy,Fantasy,School" class="form-control"></div>
+			<h3>Custom Tags Color</h3>
+			<div id="tags4" class="form-group"><input type="text" name="tags" value="Comedy,Fantasy,School" class="form-control"></div>
+		</div>
+		<script src="assets/js/jquery-2.1.1.min.js"></script>
+		<script src="assets/plugins/qtags.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var source = ['Action', 'Adventure', 'Comedy', 'Drama', 'Echi', 'Fantasy', 'Romance', 'School', 'Slice Of Life'];
+
+				$("#tags1").qtags({
+					source: source
+				});
+				$("#tags2").qtags({
+					source: source
+				});
+				$("#tags3").qtags({
+					source: source,
+					readonly: true
+				});
+				$("#tags4").qtags({
+					source: source,
+					tagColor: ['btn-danger', 'btn-success']
+				});
+			});
+		</script>
+	</body>
+</html>
